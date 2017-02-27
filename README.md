@@ -2,6 +2,8 @@
 
 This is a demo app for Android with TensorFlow to detect handwritten digits.
 
+<img src="https://github.com/AmruthPillai/TensorFlowAndroidMNIST/blob/master/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png?raw=true" />
+
 ## Introduction
 
 This Android Demo is based on TensorFlow tutorial found here:
