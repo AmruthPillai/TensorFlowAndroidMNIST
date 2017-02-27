@@ -4,44 +4,44 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:orientation="vertical"
+	android:paddingBottom="@dimen/activity_vertical_margin"
 	android:paddingLeft="@dimen/activity_horizontal_margin"
 	android:paddingRight="@dimen/activity_horizontal_margin"
 	android:paddingTop="@dimen/activity_vertical_margin"
-	android:paddingBottom="@dimen/activity_vertical_margin"
-	android:orientation="vertical"
-	tools:context="jp.narr.tensorflowmnist.MainActivity">
+	tools:context="com.amruthpillai.tensorflowmnist.MainActivity">
 
-	<jp.narr.tensorflowmnist.DrawView
+	<com.amruthpillai.tensorflowmnist.DrawView
+		android:id="@+id/view_draw"
 		android:layout_width="match_parent"
 		android:layout_height="0dp"
-		android:id="@+id/view_draw"
 		android:layout_weight="1"/>
 
 	<LinearLayout
 		android:layout_width="match_parent"
-		android:orientation="horizontal"
-		android:layout_height="wrap_content">
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
 
 		<Button
+			android:id="@+id/button_clear"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Clear"
-			android:id="@+id/button_clear"/>
+			android:text="Clear" />
 
 		<Button
+			android:id="@+id/button_detect"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
-			android:text="Detect"
-			android:id="@+id/button_detect"/>
+			android:text="Detect" />
 
 		<TextView
-			android:paddingLeft="10dp"
+			android:id="@+id/text_result"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
-			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:paddingLeft="10dp"
 			android:text=""
-			android:id="@+id/text_result"/>
+			android:textAppearance="?android:attr/textAppearanceMedium" />
 	</LinearLayout>
 
 </LinearLayout>

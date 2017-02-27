@@ -39,7 +39,10 @@ JNIEXPORT jstring JNICALL TENSORFLOW_METHOD(classifyImageBmp)(JNIEnv* env,
                                                               jobject thiz,
                                                               jobject bitmap);
 
-JNIEXPORT jstring JNICALL TENSORFLOW_METHOD(classifyImageRgb)(
+JNIEXPORT jstring
+JNIEXPORT jint
+
+JNICALL TENSORFLOW_METHOD(classifyImageRgb)(
     JNIEnv* env, jobject thiz, jintArray image, jint width, jint height);
 
 #ifdef __cplusplus

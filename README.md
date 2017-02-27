@@ -1,23 +1,25 @@
-# TensorFlowAndroidMNIST - Android MNIST demo with TensorFlow
+# TensorFlow + MNIST on Android
 
-This is a demo app for Android with Tensorflow to detect handwritten digits.
+This is a demo app for Android with TensorFlow to detect handwritten digits.
 
-![image](http://narr.jp/private/miyoshi/tensorflow/mnist_screen0.png)
+## Introduction
 
-This Android demo is based on Tensorflow tutorial.
-
-MNIST For ML Beginners
+This Android Demo is based on TensorFlow tutorial found here:
+**MNIST For ML Beginners**
 https://www.tensorflow.org/versions/r0.10/tutorials/mnist/beginners/index.html
 
-Deep MNIST for Experts
+**Deep MNIST for Experts**
 https://www.tensorflow.org/versions/r0.10/tutorials/mnist/pros/index.html
 
-## How to train model.
-Training scripts for neural network model are located at
+## Usage
 
-https://github.com/miyosuda/TensorFlowAndroidMNIST/tree/master/trainer-script
+Just use the customized DrawView to doodle any digit from 0-9 on the screen, and using the trained data from MNIST, we will try to classify the doodle.
 
-To create model by yourself, install Tensorflow and run python scripts like
+## Training the Model
+Training Scripts for Neural Network Model are located at
+https://github.com/AmruthPillai/TensorFlowAndroidMNIST/tree/master/trainer-script
+
+To create a model by yourself, install TensorFlow and run these python scripts:
 
     $ python beginner.py
 
@@ -25,14 +27,16 @@ or
 
     $ python expert.py
 
-and locate exported .pb file to assets dir.
+depending on the complexity of the model you want to use.
+
+Now, locate the exported .pb file and copy it to the assets directory of the Android App.
 
 To export training model, I added some modification to original tutorial scripts.
 
-Now Tensorflow cannot export network graph and trained network weight Variable at the same time,
-so we need to create another graph to export and convert Variable into constants.
+Now, TensorFlow cannot export network graph and trained network weight variable at the same time,
+so we need to create another graph to export and convert variable into constants.
 
-After training is finished, converted trained Variable to numpy ndarray.
+After training is finished, converted trained variable to a numpy ndarray.
 
     _W = W.eval(sess)
     _b = b.eval(sess)
@@ -68,6 +72,4 @@ and copy .so file into app/src/main/jniLibs/armeabi-v7a/ with
 
     $ make install
 
-(Unlike original Android demo in Tensorflow, you don't need to install bazel to build this demo.
-
-Tensorflow library files (.a files) and header files are extracted from original Tensorflow Android demo r0.10.
+(Unlike original Android demo in TensorFlow, you don't need to install Bazel to build this demo.
